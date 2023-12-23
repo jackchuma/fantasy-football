@@ -1,12 +1,12 @@
 import { BadRequestException, Injectable, Logger } from '@nestjs/common';
 import { ResType } from '../utils/resType';
 import { CreateUserDto } from './dto/create-user.dto';
-import { UserService } from 'src/user/user.service';
+import { UserService } from '../user/user.service';
 import bcrypt from 'bcrypt';
 import { ConfigService } from '@nestjs/config';
 import { Response } from 'express';
 import { JwtService } from '@nestjs/jwt';
-import { User } from 'src/user/user.entity';
+import { User } from '../user/user.entity';
 
 @Injectable()
 export class AuthService {
